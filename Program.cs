@@ -92,3 +92,51 @@ else
 {
     Console.WriteLine("Alguno de los datos ingresados no es un numero.");
 }
+
+//Ejercicio 3
+Console.WriteLine("Ingrese un numero para calcular mejoras de CalculadoraV2:");
+string? texto4 = Console.ReadLine();
+
+double numero;
+
+if(double.TryParse(texto4, out numero))
+{
+    Console.WriteLine("Valor absoluto: " + Math.Abs(numero));
+    Console.WriteLine("Cuadrado: " + numero * numero);
+
+    if(numero >= 0)
+    {
+        Console.WriteLine("Raiz cuadrada: " + Math.Sqrt(numero));
+    }
+    else
+    {
+        Console.WriteLine("No se puede calcular raiz cuadrada de un numero negativo");
+    }
+
+    Console.WriteLine("Seno: " + Math.Sin(numero));
+    Console.WriteLine("Coseno: " + Math.Cos(numero));
+    Console.WriteLine("Parte entera: " + Math.Truncate(numero));
+}
+else
+{
+    Console.WriteLine("No ingreso un numero valido");
+}
+
+Console.WriteLine("Ingrese primer numero para comparar:");
+string? texto5 = Console.ReadLine();
+
+Console.WriteLine("Ingrese segundo numero para comparar:");
+string? texto6 = Console.ReadLine();
+
+double numero1;
+double numero2;
+
+if(double.TryParse(texto5, out numero1) && double.TryParse(texto6, out numero2))
+{
+    Console.WriteLine("Maximo: " + Math.Max(numero1, numero2));
+    Console.WriteLine("Minimo: " + Math.Min(numero1, numero2));
+}
+else
+{
+    Console.WriteLine("Alguno de los datos ingresados no es un numero");
+}
